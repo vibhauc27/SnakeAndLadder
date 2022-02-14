@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SnakeandLadder1 // Note: actual namespace depends on the project name.
+namespace SnakeandLadder1 
 {
     class Program
     {
@@ -9,6 +9,10 @@ namespace SnakeandLadder1 // Note: actual namespace depends on the project name.
 
             //UC1
             int position = 0;
+            Random random = new Random();
+
+            int numOnDie = random.Next(1, 7);
+            Console.WriteLine($"Num on Die {numOnDie}");
         }
     }
 
