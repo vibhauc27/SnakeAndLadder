@@ -15,9 +15,12 @@ namespace SnakeandLadder1
             int position = 0;
             Random random = new Random();
 
+            int count = 0;
+
             while(position != 100)
             {
                 int numOnDie = random.Next(1, 7);
+                count++;
                 Console.WriteLine($"Num on Die {numOnDie}");
                 int options = random.Next(1, 4);
 
@@ -30,7 +33,7 @@ namespace SnakeandLadder1
 
                     case Snake:
                         position -= numOnDie;
-                        position = position < 0 ? 0 : position;
+                        position = position < 0 ? 0 : position; //Turnery operator
                         break;
 
                     case NoPlay:
@@ -39,14 +42,9 @@ namespace SnakeandLadder1
 
 
                 }
-                Console.WriteLine("POSITION " + position);
-
-
+                Console.WriteLine($"Die count : {count} position: {position}");
             }
-
-
+            Console.WriteLine("POSITION " + position);
         }
     }
-
-            
 }
