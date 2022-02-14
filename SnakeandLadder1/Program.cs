@@ -15,27 +15,33 @@ namespace SnakeandLadder1
             int position = 0;
             Random random = new Random();
 
-            int numOnDie = random.Next(1, 7);
-            Console.WriteLine($"Num on Die {numOnDie}");
-            int options = random.Next(1, 4);
-
-            switch (options)
+            while(position <= 100)
             {
-                case Ladder:
-                    position += numOnDie;
-                    break;
+                int numOnDie = random.Next(1, 7);
+                Console.WriteLine($"Num on Die {numOnDie}");
+                int options = random.Next(1, 4);
 
-                case Snake:
-                    position -= numOnDie;
-                    break;
+                switch (options)
+                {
+                    case Ladder:
+                        position += numOnDie;
+                        break;
 
-                case NoPlay:
-                    Console.WriteLine("POSITION " + position);
-                    break;
+                    case Snake:
+                        position -= numOnDie;
+                        break;
+
+                    case NoPlay:
+                        Console.WriteLine("POSITION " + position);
+                        break;
+
+
+                }
+                Console.WriteLine("POSITION " + position);
 
 
             }
-            Console.WriteLine("POSITION " + position);
+
 
         }
     }
